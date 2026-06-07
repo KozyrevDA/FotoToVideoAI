@@ -1,0 +1,4 @@
+language = Objective-C
+headers = FirebaseKMPWrapper.h
+compilerOpts = -I../iosApp/iosApp/Wrappers
+package = org.nla.phototovideoai.composeapp.nativeInterop.cinterop.firebase

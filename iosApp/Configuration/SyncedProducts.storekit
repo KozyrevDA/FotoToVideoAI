@@ -1,0 +1,99 @@
+{
+  "appPolicies" : {
+    "eula" : "",
+    "policies" : [
+      {
+        "locale" : "en_US",
+        "policyText" : "",
+        "policyURL" : ""
+      }
+    ]
+  },
+  "identifier" : "D2FD3913",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+
+  ],
+  "settings" : {
+    "_applicationInternalID" : "6757797484",
+    "_askToBuyEnabled" : false,
+    "_billingGracePeriodEnabled" : false,
+    "_billingIssuesEnabled" : false,
+    "_developerTeamID" : "4NSBPH6HKM",
+    "_disableDialogs" : false,
+    "_failTransactionsEnabled" : false,
+    "_lastSynchronizedDate" : 791907953.96015406,
+    "_locale" : "en_US",
+    "_renewalBillingIssuesEnabled" : false,
+    "_storefront" : "USA",
+    "_storeKitErrors" : [
+
+    ],
+    "_timeRate" : 0
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "21918689",
+      "localizations" : [
+
+      ],
+      "name" : "subscriptions_photo_to_life",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "4.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "6758720475",
+          "introductoryOffer" : null,
+          "localizations" : [
+
+          ],
+          "productID" : "1_month_premium_ph",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "1_month_premium_ph",
+          "subscriptionGroupID" : "21918689",
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "12.99",
+          "familyShareable" : false,
+          "groupNumber" : 2,
+          "internalID" : "6758720642",
+          "introductoryOffer" : null,
+          "localizations" : [
+
+          ],
+          "productID" : "1_year_premium_ph",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "1_year_premium_ph",
+          "subscriptionGroupID" : "21918689",
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 4,
+    "minor" : 0
+  }
+}

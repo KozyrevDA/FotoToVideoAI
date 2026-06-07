@@ -1,0 +1,1 @@
+expect fun sendEmailToDefaultApp(body: String)

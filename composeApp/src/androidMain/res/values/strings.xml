@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Оживление фото</string>
+    <string name="CONSOLE_APPLICATION_ID" translatable="false">2063683849</string>
+    <string name="channel_notification_name">Notification</string>
+    <string name="channel_notification_desc">Push notification channel</string>
+    <string name="recommend_app">I recommend the Оживление фото</string>
+    <string name="share_app">Share the app</string>
+    <string name="share_via">Share via</string>
+    <string name="app_not_found">App not found</string>
+</resources>

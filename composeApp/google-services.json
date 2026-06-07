@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "264388540592",
+    "project_id": "fototovideoai",
+    "storage_bucket": "fototovideoai.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:264388540592:android:b7574604a231c489d06375",
+        "android_client_info": {
+          "package_name": "org.nla.phototovideoai"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXx00y2icAbSS2l-ZB6j_zdVuLFnGgN58"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

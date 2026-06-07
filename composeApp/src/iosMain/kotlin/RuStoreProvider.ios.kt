@@ -1,0 +1,1 @@
+actual fun getRuStoreProvider(): RuStoreProvider? = null

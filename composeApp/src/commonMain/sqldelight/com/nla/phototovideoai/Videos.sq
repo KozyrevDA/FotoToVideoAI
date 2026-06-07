@@ -1,0 +1,23 @@
+CREATE TABLE VideoEntity (
+    id TEXT NOT NULL PRIMARY KEY,
+    created_at TEXT NOT NULL
+);
+
+selectAll:
+SELECT *
+FROM VideoEntity;
+
+selectById:
+SELECT *
+FROM VideoEntity
+WHERE id = ?;
+
+insertOrReplace:
+INSERT OR REPLACE INTO VideoEntity(
+    id,
+    created_at
+) VALUES (?, ?);
+
+deleteById:
+DELETE FROM VideoEntity
+WHERE id = ?;

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Оживление фото</string>
+    <string name="channel_notification_name">Уведомления</string>
+    <string name="channel_notification_desc">Канал для пуш-уведомлений</string>
+    <string name="recommend_app">Я рекомендую приложение Оживление фото</string>
+    <string name="share_app">Поделиться приложением</string>
+    <string name="share_via">Поделиться через</string>
+    <string name="app_not_found">Приложение не найдено</string>
+</resources>
