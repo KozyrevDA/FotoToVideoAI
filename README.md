@@ -1,35 +1,96 @@
-This is a Kotlin Multiplatform project targeting Android, iOS.
+# FotoToVideoAI — Photo to Video AI Generator
 
-* [/composeApp](./composeApp/src) is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - [commonMain](./composeApp/src/commonMain/kotlin) is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    the [iosMain](./composeApp/src/iosMain/kotlin) folder would be the right place for such calls.
-    Similarly, if you want to edit the Desktop (JVM) specific part, the [jvmMain](./composeApp/src/jvmMain/kotlin)
-    folder is the appropriate location.
-
-* [/iosApp](./iosApp/iosApp) contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform,
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
-
-### Build and Run Android Application
-
-To build and run the development version of the Android app, use the run configuration from the run widget
-in your IDE’s toolbar or build it directly from the terminal:
-- on macOS/Linux
-  ```shell
-  ./gradlew :composeApp:assembleDebug
-  ```
-- on Windows
-  ```shell
-  .\gradlew.bat :composeApp:assembleDebug
-  ```
-
-### Build and Run iOS Application
-
-To build and run the development version of the iOS app, use the run configuration from the run widget
-in your IDE’s toolbar or open the [/iosApp](./iosApp) directory in Xcode and run it from there.
+A Kotlin Multiplatform mobile application (Android & iOS) that transforms photos into AI-generated videos using cutting-edge models like **VEO 3** and **Kling v2/v3**.
 
 ---
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+## Features
+
+- **AI Video Generation** — Convert any photo into a short video using VEO 3 (primary) with automatic fallback to Kling (Hedra API)
+- **Trial Generation** — New users can try the app without registration or payment (one free generation via "Photo by Sample")
+- **Multiple Templates** — Pre-built templates for quick video creation
+- **Token System** — In-app currency for managing generation requests
+- **Multilingual** — Supports multiple languages (Russian, English, Belarusian, and more)
+- **Payments** — RuStore billing integration for token purchases
+- **Authentication** — Google Sign-In and email/password login
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Mobile (shared) | Kotlin Multiplatform + Compose Multiplatform |
+| Android | Kotlin, Jetpack Compose |
+| iOS | SwiftUI + Compose Multiplatform |
+| Backend | Ktor (Kotlin) |
+| Database | PostgreSQL + Exposed ORM |
+| AI Models | VEO 3 (laozhang.ai), Kling v3 (Hedra API) |
+| Auth | Google OAuth, JWT |
+| DI | Koin |
+| Networking | Ktor Client |
+| Image Loading | Coil |
+
+---
+
+## Project Structure
+
+```
+composeApp/
+├── src/
+│   ├── commonMain/        # Shared business logic, UI screens, network layer
+│   ├── androidMain/       # Android-specific implementations
+│   └── iosMain/           # iOS-specific implementations
+iosApp/                    # iOS entry point (Xcode project)
+```
+
+---
+
+## Build & Run
+
+### Android
+
+```shell
+# macOS / Linux
+./gradlew :composeApp:assembleDebug
+
+# Windows
+.\gradlew.bat :composeApp:assembleDebug
+```
+
+Or open the project in **Android Studio** and press Run.
+
+### iOS
+
+Open the `/iosApp` directory in **Xcode** and run on simulator or device.
+
+---
+
+## AI Model Architecture
+
+```
+User Request
+     │
+     ▼
+  VEO 3 (primary)
+     │
+     ├── Success → Return video
+     │
+     └── Failure (overload / timeout)
+          │
+          ▼
+       Kling v3 Standard (fallback via Hedra API)
+          │
+          ├── Success → Return video
+          │
+          └── Failure → Show error to user
+```
+
+---
+
+## Requirements
+
+- Android 7.0+ (API 24)
+- iOS 16+
+- Android Studio Hedgehog or newer
+- Xcode 15+
